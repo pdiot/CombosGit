@@ -1,0 +1,605 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/Ensemble"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#8d9bb2"
+        android:orientation="vertical"
+        tools:context="com.example.pierre.combos.NewCombo"
+        tools:showIn="@layout/activity_newcombo">
+
+    <LinearLayout  android:id="@+id/Drawing"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5"
+        android:orientation="vertical"
+        android:background="#000"
+        android:layout_marginBottom="2dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent">
+
+        <LinearLayout            android:id="@+id/Drawing1"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_weight="5"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="2dp"
+            android:orientation="horizontal"
+            android:background="#2a4268"
+            android:tag="Drawing1"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            >
+
+
+        </LinearLayout>
+        <LinearLayout            android:id="@+id/Drawing2"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_weight="5"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="2dp"
+            android:orientation="horizontal"
+            android:background="#2a4268"
+            android:tag="Drawing2"
+            app:layout_constraintTop_toBottomOf="@+id/Drawing1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:visibility="gone"
+            >
+
+        </LinearLayout>
+        <LinearLayout            android:id="@+id/Drawing3"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_weight="5"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="2dp"
+            android:orientation="horizontal"
+            android:background="#2a4268"
+            android:tag="Drawing3"
+            app:layout_constraintTop_toBottomOf="@+id/Drawing2"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:visibility="gone"
+            >
+
+        </LinearLayout>
+        <LinearLayout            android:id="@+id/Drawing4"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_weight="5"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="2dp"
+            android:orientation="horizontal"
+            android:background="#2a4268"
+            android:tag="Drawing4"
+            app:layout_constraintTop_toBottomOf="@+id/Drawing3"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:visibility="gone"
+            >
+
+        </LinearLayout>
+        <LinearLayout            android:id="@+id/Drawing5"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_weight="5"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="2dp"
+            android:orientation="horizontal"
+            android:background="#2a4268"
+            android:tag="Drawing5"
+            app:layout_constraintTop_toBottomOf="@+id/Drawing4"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:visibility="gone"
+            >
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <LinearLayout   android:id="@+id/Inputs"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5"
+        android:background="#054a45"
+        android:orientation="vertical"
+        >
+
+        <android.support.constraint.ConstraintLayout            android:id="@+id/Onglets"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3"
+            android:background="@drawable/background_directions"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <Button
+                android:id="@+id/DirectionsTabSelector"
+                android:onClick="activateLayout"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:text="@string/newcombo_tab_left"
+                android:tag="Directions"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/ButtonsTabSelector"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <Button
+                android:id="@+id/ButtonsTabSelector"
+                android:onClick="activateLayout"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:text="@string/newcombo_tab_middle"
+                android:tag="Buttons"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toRightOf="@+id/DirectionsTabSelector"
+                app:layout_constraintRight_toLeftOf="@+id/EtcTabSelector"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <Button
+                android:id="@+id/EtcTabSelector"
+                android:onClick="activateLayout"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:text="@string/newcombo_tab_right"
+                android:tag="Etc"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toRightOf="@+id/ButtonsTabSelector"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+
+        </android.support.constraint.ConstraintLayout>
+
+        <FrameLayout            android:id="@+id/BoutonsActifs"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="10"
+            >
+
+
+            <LinearLayout                android:id="@+id/PanelDirectionsV"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="visible"
+                android:orientation="vertical"
+                android:background="@drawable/background_directions"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="@+id/ButtonsTab"
+                tools:layout_constraintBottom_creator="1"
+                tools:layout_constraintLeft_creator="1">
+
+                <LinearLayout                    android:id="@+id/Directions1"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="5"
+                    android:orientation="horizontal">
+
+                    <Button                        android:id="@+id/buttonub"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="ub"
+                        android:tag="ub"
+                        android:onClick="addInput"
+                        android:longClickable="true"
+                    />
+
+                    <Button                        android:id="@+id/buttonu"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="u"
+                        android:tag="u"
+                        android:onClick="addInput"
+                        android:longClickable="true"
+                    />
+
+                    <Button                        android:id="@+id/buttonuf"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="uf"
+                        android:tag="uf"
+                        android:onClick="addInput"
+                        android:longClickable="true"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout                    android:id="@+id/Directions2"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="5"
+                    android:orientation="horizontal">
+
+                    <Button                        android:id="@+id/buttonb"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="b"
+                        android:tag="b"
+                        android:onClick="addInput"
+                        android:longClickable="true"
+                        />
+
+                    <Button                        android:id="@+id/buttonn"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="n"
+                        android:tag="n"
+                        android:onClick="addInput"
+                        />
+
+                    <Button                        android:id="@+id/buttonf"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="f"
+                        android:tag="f"
+                        android:onClick="addInput"
+                        android:longClickable="true"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout                    android:id="@+id/Directions3"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="5"
+                    android:orientation="horizontal">
+
+                    <Button                        android:id="@+id/buttondb"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="db"
+                        android:tag="db"
+                        android:onClick="addInput"
+                        android:longClickable="true"
+                        />
+
+                    <Button                        android:id="@+id/buttond"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="d"
+                        android:tag="d"
+                        android:onClick="addInput"
+                        android:longClickable="true"
+                        />
+
+                    <Button                        android:id="@+id/buttondf"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="df"
+                        android:tag="df"
+                        android:onClick="addInput"
+                        android:longClickable="true"
+                        />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout                android:id="@+id/PanelBoutonsV"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="invisible"
+                android:background="@drawable/background_buttons"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="@+id/ButtonsTab"
+                tools:layout_constraintBottom_creator="1"
+                tools:layout_constraintLeft_creator="1">
+
+                <LinearLayout                    android:id="@+id/Boutons1"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="5"
+                    android:orientation="horizontal">
+
+                    <Button                        android:id="@+id/button1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="1"
+                        android:tag="1"
+                        android:onClick="addInput"
+                        />
+
+                    <Button                        android:id="@+id/button2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="2"
+                        android:tag="2"
+                        android:onClick="addInput"
+                        />
+
+                    <Button                        android:id="@+id/button3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="3"
+                        android:tag="3"
+                        android:onClick="addInput"
+                        />
+
+                    <Button                        android:id="@+id/button4"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="4"
+                        android:tag="4"
+                        android:onClick="addInput"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout                    android:id="@+id/Boutons2"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="5"
+                    android:orientation="horizontal">
+
+                    <Button                        android:id="@+id/button12"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="1+2"
+                        android:tag="1+2"
+                        android:onClick="addInput"
+                        />
+
+                    <Button                        android:id="@+id/button13"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="1+3"
+                        android:tag="1+3"
+                        android:onClick="addInput"
+                        />
+
+                    <Button                        android:id="@+id/button14"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="1+4"
+                        android:tag="1+4"
+                        android:onClick="addInput"
+                        />
+
+                    <Button                        android:id="@+id/button23"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="2+3"
+                        android:tag="2+3"
+                        android:onClick="addInput"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout                    android:id="@+id/Boutons3"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="5"
+                    android:orientation="horizontal">
+
+                    <Button                        android:id="@+id/button24"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="2+4"
+                        android:tag="2+4"
+                        android:onClick="addInput"
+                        />
+
+                    <Button                        android:id="@+id/button34"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="3+4"
+                        android:tag="3+4"
+                        android:onClick="addInput"
+                        />
+
+                    <Button                        android:id="@+id/button123"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="1+2+3"
+                        android:tag="1+2+3"
+                        android:onClick="addInput"
+                        />
+
+                    <Button                        android:id="@+id/button124"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="1+2+4"
+                        android:tag="1+2+4"
+                        android:onClick="addInput"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout                    android:id="@+id/Boutons4"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="5"
+                    android:orientation="horizontal">
+
+                    <Button                        android:id="@+id/button134"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="1+3+4"
+                        android:tag="1+3+4"
+                        android:onClick="addInput"
+                        />
+
+                    <Button                        android:id="@+id/button234"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="2+3+4"
+                        android:tag="2+3+4"
+                        android:onClick="addInput"
+                        />
+
+                    <Button                        android:id="@+id/button1234"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="1+2+3+4"
+                        android:tag="1+2+3+4"
+                        android:onClick="addInput"
+                        />
+
+                    <Button                        android:id="@+id/buttonrage"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="rage art"
+                        android:tag="RA"
+                        android:onClick="addInput"
+                        />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout                android:id="@+id/PanelEtcV"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="invisible"
+                android:background="@drawable/background_etc"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="@+id/ButtonsTab"
+                tools:layout_constraintBottom_creator="1"
+                tools:layout_constraintLeft_creator="1">
+
+                <LinearLayout                    android:id="@+id/EtcTab1"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="4"
+                    android:orientation="horizontal">
+
+                    <Button                        android:id="@+id/buttonSave"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Save Combo" />
+
+                    <Button                        android:id="@+id/buttonReset"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Reset"
+                        android:onClick="resetWindow"/>
+
+
+                </LinearLayout>
+
+                <LinearLayout                    android:id="@+id/EtcTab2"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                    android:layout_weight="2"
+                android:orientation="horizontal">
+
+                <Button                        android:id="@+id/buttonDelLast"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="Remove last input"
+                    android:onClick="removeLastInput"
+                    />
+
+                <Button                        android:id="@+id/buttonInto"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="Into"
+                    android:tag="Into"
+                    android:onClick="addInput"/>
+
+
+            </LinearLayout>
+
+                <LinearLayout                    android:id="@+id/EtcTab3"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_weight="2"
+                android:orientation="horizontal">
+
+                <Button                        android:id="@+id/buttonQCF"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="QCF"
+                    android:tag="QCF"
+                    android:onClick="addInput"/>
+
+                <Button                        android:id="@+id/buttonQCB"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="QCB"
+                    android:tag="QCB"
+                    android:onClick="addInput"/>
+
+                <Button                        android:id="@+id/buttonCD"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="CD"
+                    android:tag="CD"
+                    android:onClick="addInput"/>
+
+                <Button                        android:id="@+id/buttonWS"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="WS"
+                    android:tag="WS"
+                    android:onClick="addInput"/>
+
+
+            </LinearLayout>
+
+
+            </LinearLayout>
+
+
+
+        </FrameLayout>
+    </LinearLayout>
+
+
+</LinearLayout>
+
