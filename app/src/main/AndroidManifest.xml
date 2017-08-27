@@ -23,8 +23,14 @@
         <activity
             android:name=".NewCombo"
             android:label="Combos"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
-        <activity android:name=".SavingCombo"></activity>
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity
+            android:name=".SavingCombo"
+            android:label="Combos"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden">
+        </activity>
     </application>
 
 </manifest>

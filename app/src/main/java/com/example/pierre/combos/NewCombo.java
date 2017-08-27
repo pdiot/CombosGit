@@ -2,6 +2,7 @@ package com.example.pierre.combos;
 
 import android.app.Fragment;
 import android.content.ContentValues;
+import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Color;
 import android.graphics.Typeface;
@@ -119,16 +120,6 @@ public class NewCombo extends Activity {
         directionsButton.setTypeface(typefaceButtons);
         buttonsButton.setTypeface(typefaceButtons);
         etcButton.setTypeface(typefaceButtons);
-
-        // Open up our Database in case we want to save some stuff
-
-        myDbHelper = new ComboDatabaseHelper(getApplicationContext());
-
-        // Set our db up :
-
-        // Test for db
-
-
 
     }
 
@@ -551,6 +542,17 @@ public class NewCombo extends Activity {
         toast = Toast.makeText(getApplicationContext(), toastText, Toast.LENGTH_SHORT);
         toast.show();
 
+    }
+
+    public void ToHome (View view) {
+        Intent intent = new Intent(this, Main.class);
+        startActivity(intent);
+    }
+
+    protected void SaveCombo (View view) {
+        Intent intent = new Intent(this, SavingCombo.class);
+        intent.putExtra("input", comboInput);
+        startActivity(intent);
     }
 
 

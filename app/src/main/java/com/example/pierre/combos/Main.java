@@ -1,23 +1,13 @@
 package com.example.pierre.combos;
 
-import android.app.AlertDialog;
-import android.content.ContentValues;
 import android.content.Intent;
-import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class Main extends AppCompatActivity {
 
@@ -31,17 +21,22 @@ public class Main extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         TextView titleTextView = (TextView) findViewById(R.id.titleTextView);
+        TextView subTitleTextView = (TextView) findViewById(R.id.subTitleTextView);
 
         Typeface typefaceTitle = Typeface.createFromAsset(getAssets(), "fonts/monoton-regular.ttf");
+        Typeface typefaceSubTitle = Typeface.createFromAsset(getAssets(), "fonts/tarrgetacad.ttf");
         titleTextView.setTypeface(typefaceTitle);
+        subTitleTextView.setTypeface(typefaceSubTitle);
 
         Button myCombosButton = (Button) findViewById(R.id.buttonMyCombos);
         Button newComboButton = (Button) findViewById(R.id.buttonNewCombo);
+
 
         Typeface typefaceButtons =  Typeface.createFromAsset(getAssets(), "fonts/tarrgetengrave.ttf");
         myCombosButton.setTypeface(typefaceButtons);
         newComboButton.setTypeface(typefaceButtons);
 
+        /*
         // Open up our Database in case we want to save some stuff
 
         myDbHelper = new ComboDatabaseHelper(getApplicationContext());
@@ -58,7 +53,7 @@ public class Main extends AppCompatActivity {
         String selection = FeedEntry.COLUMN_NAME_TITLE + " = ?";
         String[] selectionArgs = { "My Title" };
         */
-
+/*
         String sortOrder = DatabaseContract.CharactersTable.COLUMN_NAME_CHARACTER + " ASC";
 
         Cursor cursor = db.query(
@@ -85,11 +80,18 @@ public class Main extends AppCompatActivity {
         if (resultsIds.size() != 38) {
             InsertCharactersInDb();
         }
-
+    */
 
 
     }
 
+
+    public void NewCombo(View view) {
+        Intent intent = new Intent(this, NewCombo.class);
+        startActivity(intent);
+    }
+
+/*
     protected void InsertCharactersInDb() {
 
 
@@ -258,10 +260,6 @@ public class Main extends AppCompatActivity {
 
     }
 
+*/
 
-
-    public void newCombo(View view) {
-        Intent intent = new Intent(this, NewCombo.class);
-        startActivity(intent);
-    }
 }

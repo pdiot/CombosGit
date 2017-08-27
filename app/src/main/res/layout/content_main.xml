@@ -27,6 +27,23 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.17" />
 
+    <TextView
+        android:id="@+id/subTitleTextView"
+        android:layout_width="450dp"
+        android:layout_height="75dp"
+        android:shadowColor="#cc3716"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="1"
+        android:text="@string/homepage_subtitle"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        app:layout_constraintTop_toBottomOf="@id/titleTextView"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintVertical_bias="0.17" />
+
 
     <android.support.constraint.ConstraintLayout
         android:id="@+id/buttons_layout"
@@ -51,7 +68,7 @@
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
             android:layout_marginStart="16dp"
-            android:onClick="newCombo"
+            android:onClick="NewCombo"
             android:text="@string/homepage_button_1"
             android:textSize="24sp"
             app:layout_constraintLeft_toLeftOf="parent"

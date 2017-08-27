@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.pierre.combos.Main">
+    tools:context="com.example.pierre.combos.NewCombo">
 
     <include layout="@layout/content_newcombo" />
 

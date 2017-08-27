@@ -11,12 +11,6 @@ public class DatabaseContract {
 
     }
 
-    public static class CharactersTable implements BaseColumns {
-        public static final String TABLE_NAME = "Characters";
-        public static final String COLUMN_NAME_CHARACTER = "CharacterName";
-        public static final String COLUMN_NAME_ICON = "IconPath";
-    }
-
     public static class ComboTable implements BaseColumns{
         public static final String TABLE_NAME = "Combos";
         public static final String COLUMN_NAME_CHARACTER = "Character";
