@@ -591,6 +591,7 @@ public class MyCombos extends Activity {
             });
         }
 
+        db.close();
     }
 
     public void LoadCombosForCurrentCharacterSortedDamage () {
@@ -726,6 +727,7 @@ public class MyCombos extends Activity {
                 }
             });
         }
+        db.close();
 
     }
 
@@ -863,6 +865,7 @@ public class MyCombos extends Activity {
             });
         }
 
+        db.close();
     }
 
     public void LoadCombosForCurrentCharacterSortedDamage (View viewIn) {
@@ -999,6 +1002,7 @@ public class MyCombos extends Activity {
             });
         }
 
+        db.close();
     }
 
     public void LoadCombosForCurrentCharacterSortedInput () {
@@ -1134,6 +1138,7 @@ public class MyCombos extends Activity {
                 }
             });
         }
+        db.close();
 
     }
 
@@ -1271,6 +1276,7 @@ public class MyCombos extends Activity {
             });
         }
 
+        db.close();
     }
 
     public static void setMargins (View v, int l, int t, int r, int b) {
@@ -1289,5 +1295,10 @@ public class MyCombos extends Activity {
     public void NewCombo(View view) {
         Intent intent = new Intent(this, NewCombo.class);
         startActivity(intent);
+    }
+
+    public void onDestroy() {
+        mRetainedFragment.setData(character);
+        super.onDestroy();
     }
 }

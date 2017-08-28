@@ -33,12 +33,16 @@ public class Main extends AppCompatActivity {
         Button myCombosButton = (Button) findViewById(R.id.buttonMyCombos);
         Button newComboButton = (Button) findViewById(R.id.buttonNewCombo);
         Button aboutButton = (Button) findViewById(R.id.buttonAbout);
+        Button myNotesButton = (Button) findViewById(R.id.buttonMyNotes);
+        Button newNoteButton = (Button) findViewById(R.id.buttonNewNote);
 
 
         Typeface typefaceButtons =  Typeface.createFromAsset(getAssets(), "fonts/tarrgetengrave.ttf");
         myCombosButton.setTypeface(typefaceButtons);
         newComboButton.setTypeface(typefaceButtons);
         aboutButton.setTypeface(typefaceButtons);
+        myNotesButton.setTypeface(typefaceButtons);
+        newNoteButton.setTypeface(typefaceButtons);
 
         /*
         // Open up our Database in case we want to save some stuff
@@ -86,7 +90,6 @@ public class Main extends AppCompatActivity {
         }
     */
 
-
     }
 
 
@@ -102,6 +105,16 @@ public class Main extends AppCompatActivity {
 
     public void About (View view) {
         Intent intent = new Intent(this, About.class);
+        startActivity(intent);
+    }
+
+    public void NewNote (View view) {
+        Intent intent = new Intent(this, NewNote.class);
+        startActivity(intent);
+    }
+
+    public void MyNotes (View view) {
+        Intent intent = new Intent(this, MyNotes.class);
         startActivity(intent);
     }
 

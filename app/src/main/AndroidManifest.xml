@@ -36,10 +36,31 @@
         <activity
             android:name=".ComboDetails"
             android:label="Combos"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar">
+
+        </activity>
+        <activity android:name=".NewNote"
+            android:label="Combos"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden" >
+
+        </activity>
+        <activity android:name=".MyNotes"
+            android:label="Combos"
+            android:theme="@style/AppTheme.NoActionBar">
+
+        </activity>
+        <activity android:name=".NoteDetails"
+            android:label="Combos"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden" >
+
+        </activity>
         <activity android:name=".About"
             android:label="Combos"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar">
+
+        </activity>
     </application>
 
 </manifest>

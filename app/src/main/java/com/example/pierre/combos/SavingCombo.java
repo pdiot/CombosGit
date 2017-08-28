@@ -129,7 +129,7 @@ public class SavingCombo extends Activity {
 
                 Log.d("Saving Combo : insertdb", "new row id > 0");
                 toast = new Toast(getApplicationContext());
-                toast = toast.makeText(getApplicationContext(), "Combo enregistré avec succès, ID n°" + newRowId, Toast.LENGTH_LONG);
+                toast = toast.makeText(getApplicationContext(), "Successfully saved combo" , Toast.LENGTH_LONG);
                 toast.show();
                 Log.d("Saving Combo : insertdb", "toast ok");
                 db.close();
@@ -139,7 +139,7 @@ public class SavingCombo extends Activity {
             else {
                 Log.d("Saving Combo : insertdb", "new row id < 0");
                 toast = new Toast(getApplicationContext());
-                toast = toast.makeText(getApplicationContext(), "erreur lors de l'enregistrement du combo", Toast.LENGTH_LONG);
+                toast = toast.makeText(getApplicationContext(), "Error when saving note", Toast.LENGTH_LONG);
                 toast.show();
                 Log.d("Saving Combo : insertdb", "toast ok");
                 db.close();

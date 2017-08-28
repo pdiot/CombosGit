@@ -21,28 +21,6 @@
 
 
     <TextView
-        android:id="@+id/titleTextView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="0.5"
-        android:shadowColor="#efc909"
-        android:shadowDx="2"
-        android:shadowDy="2"
-        android:shadowRadius="1"
-        android:text="@string/homepage_title"
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        android:textSize="30sp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0"
-        android:visibility="invisible"/>
-    <TextView
         android:id="@+id/subTitleTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -55,10 +33,26 @@
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="30sp"
-        app:layout_constraintTop_toBottomOf="@+id/titleTextView"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
         />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0"
+        android:visibility="invisible"/>
+
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.5"
+        android:shadowColor="#efc909"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="1"
+        android:text="@string/homepage_title"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="40sp"/>
 
     <View
         android:layout_width="match_parent"
@@ -71,14 +65,11 @@
         style="?android:buttonBarButtonStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
+        android:layout_weight="0"
         android:onClick="MyCombos"
         android:text="@string/homepage_button_2"
         android:textColor="@color/white"
         android:textSize="24sp"
-        app:layout_constraintTop_toBottomOf="@+id/subTitleTextView"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
         />
 
     <Button
@@ -86,14 +77,37 @@
         style="?android:buttonBarButtonStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
+        android:layout_weight="0"
         android:onClick="NewCombo"
         android:text="@string/homepage_button_1"
         android:textColor="@color/white"
-        android:textSize="24sp"
-        app:layout_constraintTop_toBottomOf="@+id/buttonMyCombos"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent" />
+        android:textSize="24sp" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.5"
+        android:visibility="invisible"/>
+
+    <Button
+        android:id="@+id/buttonMyNotes"
+        style="?android:buttonBarButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:onClick="MyNotes"
+        android:text="@string/homepage_button_3"
+        android:textColor="@color/white"
+        android:textSize="24sp" />
+    <Button
+        android:id="@+id/buttonNewNote"
+        style="?android:buttonBarButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:onClick="NewNote"
+        android:text="@string/homepage_button_4"
+        android:textColor="@color/white"
+        android:textSize="24sp" />
     <View
         android:layout_width="match_parent"
         android:layout_height="0dp"

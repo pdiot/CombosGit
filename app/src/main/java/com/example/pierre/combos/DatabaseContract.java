@@ -19,4 +19,11 @@ public class DatabaseContract {
         public static final String COLUMN_NAME_TAG = "ComboTag";
     }
 
+    public static class NotesTables implements BaseColumns {
+        public static final String TABLE_NAME = "Notes";
+        public static final String COLUMN_NAME_CHARACTER = "Character";
+        public static final String COLUMN_NAME_TAG = "Tag";
+        public static final String COLUMN_NAME_NOTE = "Note";
+    }
+
 }

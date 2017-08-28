@@ -15,6 +15,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -270,6 +271,7 @@ public class ComboDetails extends Activity {
 
     protected void updateComboDB (View view) {
         SQLiteDatabase db = myDbHelper.getWritableDatabase();
+        Toast toast = new Toast(getApplicationContext());
 
         ContentValues values = new ContentValues();
         values.put(DatabaseContract.ComboTable.COLUMN_NAME_TAG, tagTextBox.getText().toString());
@@ -285,19 +287,41 @@ public class ComboDetails extends Activity {
                 selectionArgs
         );
 
+        if (count > 0) {
+            toast = toast.makeText(getApplicationContext(), "Combo tag / damage updated", Toast.LENGTH_SHORT);
+            toast.show();
+            Log.d("Log NoteDetails", "Lines updated : " +count);
+        } else {
+            toast = toast.makeText(getApplicationContext(), "Error when updating combo", Toast.LENGTH_SHORT);
+            toast.show();
+        }
+
         Log.d("Log ComboDetails", "Nombre de lignes mises à jour : " + count);
+        db.close();
 
     }
 
     protected void deleteComboDB (View view) {
         SQLiteDatabase db = myDbHelper.getWritableDatabase();
+        Toast toast = new Toast(getApplicationContext());
 
         String selection = DatabaseContract.ComboTable._ID + " = ?";
         String[] selectionArgs = {comboId};
         int count = db.delete(DatabaseContract.ComboTable.TABLE_NAME, selection, selectionArgs);
 
+
+        if (count > 0) {
+            toast = toast.makeText(getApplicationContext(), "Combo successfully deleted", Toast.LENGTH_SHORT);
+            toast.show();
+            Log.d("Log ComboDetails", "Lines deleted : " +count);
+            deactivateUpdate();
+        } else {
+            toast = toast.makeText(getApplicationContext(), "Error when deleting combo", Toast.LENGTH_SHORT);
+            toast.show();
+        }
+
+        db.close();
         Log.d("Log ComboDetails", "Lines deleted : " +count);
-        deactivateUpdate();
     }
 
     protected void deactivateUpdate(){

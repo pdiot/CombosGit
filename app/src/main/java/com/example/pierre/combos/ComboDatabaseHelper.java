@@ -23,10 +23,20 @@ public class ComboDatabaseHelper extends SQLiteOpenHelper{
                     DatabaseContract.ComboTable.COLUMN_NAME_DAMAGE + " INTEGER)"
             ;
 
+    private static final String SQL_CREATE_NOTES_TABLE =
+            "CREATE TABLE " + DatabaseContract.NotesTables.TABLE_NAME + " (" +
+                    DatabaseContract.NotesTables._ID + " INTEGER PRIMARY KEY," +
+                    DatabaseContract.NotesTables.COLUMN_NAME_CHARACTER + " TEXT," +
+                    DatabaseContract.NotesTables.COLUMN_NAME_TAG + " TEXT," +
+                    DatabaseContract.NotesTables.COLUMN_NAME_NOTE + " TEXT)"
+            ;
+
     private static final String SQL_DELETE_COMBOS =
             "DROP TABLE IF EXISTS " + DatabaseContract.ComboTable.TABLE_NAME;
+    private static final String SQL_DELETE_NOTES =
+            "DROP TABLE IF EXISTS " + DatabaseContract.NotesTables.TABLE_NAME;
 
-    private static final int DATABASE_VERSION = 2;
+    private static final int DATABASE_VERSION = 3;
     private static final String DATABASE_NAME = "ComboSampler.db";
 
     public ComboDatabaseHelper (Context context) {
@@ -35,10 +45,12 @@ public class ComboDatabaseHelper extends SQLiteOpenHelper{
 
     public void onCreate(SQLiteDatabase db) {
         db.execSQL(SQL_CREATE_COMBOS_TABLE);
+        db.execSQL(SQL_CREATE_NOTES_TABLE);
     }
 
     public void onUpgrade(SQLiteDatabase db, int oldV, int newV) {
         db.execSQL(SQL_DELETE_COMBOS);
+        db.execSQL(SQL_DELETE_NOTES);
         onCreate(db);
     }
 

@@ -1,10 +1,12 @@
 <resources>
     <string name="app_name">Combos</string>
     <string name="action_settings">Settings</string>
-    <string name="homepage_title" translatable="false">COMBO SAMPLER</string>
+    <string name="homepage_title" translatable="false">COMPANION</string>
     <string name="homepage_subtitle" translatable="false">TEKKEN 7</string>
     <string name="homepage_button_1">NEW COMBO</string>
     <string name="homepage_button_2">MY COMBOS</string>
+    <string name="homepage_button_3">MY NOTES</string>
+    <string name="homepage_button_4">NEW NOTE</string>
     <string name="newcombo_tab_left">Arrows</string>
     <string name="newcombo_tab_middle">Buttons</string>
     <string name="newcombo_tab_right">Etc</string>
@@ -16,5 +18,11 @@
     <string name="creditArtist">Ron Maurice \'Scrub Zilla\' Johnson, Character portaits and full body Art</string>
     <string name="specialThanks">Special thanks to Nick \'OffInBed\' DeJesus, for providing me with the ability to use this awesome art</string>
     <string name="font">Thanks to Iconian Fonts @ dafont.com for the slick looking Tekken Font !</string>
-    <string name="aboutMain">About ComboSampler for Tekken 7</string>
+    <string name="aboutMain">About Tekken 7 Companion</string>
+    <string name="disclaimer1">This app is a non-official app, for you to have an easier time learning the game.</string>
+    <string name="disclaimer2">It allows you to write down combos, and access them later in a nice, visually attractive way.</string>
+    <string name="disclaimer3">You can also use the Notes functionality to write down any information you find relevant about a particular character, and consult these when you want (before a tournament set, for example).</string>
+    <string name="noteTagHint">Enter a tag for your note</string>
+    <string name="noteTextHint">Type your note here</string>
+    <string name="saveNewNote">Save Note</string>
 </resources>
