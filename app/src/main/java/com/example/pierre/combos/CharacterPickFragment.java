@@ -2,6 +2,7 @@ package com.example.pierre.combos;
 
 import android.app.Fragment;
 import android.os.Bundle;
+import android.view.View;
 
 import java.util.ArrayList;
 
@@ -23,7 +24,9 @@ public class CharacterPickFragment extends Fragment {
         this.data = dataIn;
     }
 
+
     public String getData () {
         return this.data;
     }
+
 }

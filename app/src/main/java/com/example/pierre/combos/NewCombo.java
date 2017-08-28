@@ -57,9 +57,6 @@ public class NewCombo extends Activity {
     protected int drawingHeight;
     protected int drawingWidth;
 
-    // our Db helper
-    ComboDatabaseHelper myDbHelper ;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,6 +65,12 @@ public class NewCombo extends Activity {
 
         // We setup the longClickListeners for holding directional inputs
         setLongClickListeners();
+
+        if (getIntent().getExtras() != null) {
+            comboInput = getIntent().getStringArrayListExtra("Inputs");
+        } else {
+            comboInput = new ArrayList<String>();
+        }
 
         // We handle our fragment here
 
@@ -82,12 +85,11 @@ public class NewCombo extends Activity {
             // we add the Fragment to the list of Fragments handled by our FragmentManager
             fm.beginTransaction().add(mRetainedFragment, TAG_RETAINED_FRAGMENT).commit();
             // we set our initial Data
-            ArrayList<String> tmp = new ArrayList<String>();
-            mRetainedFragment.setData(tmp);
+            mRetainedFragment.setData(comboInput);
         }
 
         // We setup the variables used throughout our functions
-        comboInput =mRetainedFragment.getData(); // If it's the first onCreate call, it's a new ArrayList<String>, else, it contains the last inputs we stored in mRetainedFragment
+        comboInput =mRetainedFragment.getData(); // If it's the first onCreate call, it's a new ArrayList<String> or w/e we got fed by intent.extras, else, it contains the last inputs we stored in mRetainedFragment
         inputsDrawn = 0;
         currentLayout = (LinearLayout)findViewById(R.id.Drawing1); // we'll draw on Drawing1 first
 
@@ -131,48 +133,68 @@ public class NewCombo extends Activity {
 
     protected void setLongClickListeners() {
         LinearLayout layoutV = (LinearLayout) findViewById(R.id.PanelDirectionsV);
-        for (int i=0; i<layoutV.getChildCount(); i++) {
-            LinearLayout layoutH = (LinearLayout) layoutV.getChildAt(i);
-            for (int j=0; j<layoutH.getChildCount(); j++) {
-                Button b = (Button) layoutH.getChildAt(j);
-                b.setOnLongClickListener(new View.OnLongClickListener() {
-                    @Override
-                    public boolean onLongClick(View v) {
+        for (int i = 0; i < layoutV.getChildCount(); i++) {
+            View view = layoutV.getChildAt(i);
+            if (view.getTag().toString().equals("sep")) {
+                // do nothing
+            } else {
+                LinearLayout layoutH = (LinearLayout) layoutV.getChildAt(i);
+                for (int j = 0; j < layoutH.getChildCount(); j++) {
+                    View view1 = layoutH.getChildAt(j);
+                    if (view1.getTag().toString().equals("sep")) {
+                        // do nothing
+                    } else {
+                        Button b = (Button) layoutH.getChildAt(j);
+                        b.setOnLongClickListener(new View.OnLongClickListener() {
+                            @Override
+                            public boolean onLongClick(View v) {
 
-                        Button b = (Button) v;
-                        String input = b.getTag().toString();
-                        if (comboInput.size() == 0) {
-                            processInputSizes(); // we call it once, when adding our first input
-                        }
+                                Button b = (Button) v;
+                                String input = b.getTag().toString();
+                                if (comboInput.size() == 0) {
+                                    processInputSizes(); // we call it once, when adding our first input
+                                }
 
-                        switch (input) {
-                            case "ub" : input = "UB";
-                                break;
-                            case "u" : input = "U";
-                                break;
-                            case "uf" : input = "UF";
-                                break;
-                            case "b" :input = "B";
-                                break;
-                            case "n" : input = "N";
-                                break;
-                            case "f" : input = "F";
-                                break;
-                            case "db" : input = "DB";
-                                break;
-                            case "d" : input = "D";
-                                break;
-                            case "df" : input = "DF";
-                                break;
-                            default : input = "default";
-                        }
+                                switch (input) {
+                                    case "ub":
+                                        input = "UB";
+                                        break;
+                                    case "u":
+                                        input = "U";
+                                        break;
+                                    case "uf":
+                                        input = "UF";
+                                        break;
+                                    case "b":
+                                        input = "B";
+                                        break;
+                                    case "n":
+                                        input = "N";
+                                        break;
+                                    case "f":
+                                        input = "F";
+                                        break;
+                                    case "db":
+                                        input = "DB";
+                                        break;
+                                    case "d":
+                                        input = "D";
+                                        break;
+                                    case "df":
+                                        input = "DF";
+                                        break;
+                                    default:
+                                        input = "default";
+                                }
 
-                        comboInput.add(input);
-                        addVisual(input);
-                        return true;
+                                comboInput.add(input);
+                                addVisual(input);
+                                return true;
+                            }
+                        });
+
                     }
-                });
-
+                }
             }
         }
     }
@@ -182,7 +204,7 @@ public class NewCombo extends Activity {
         String buttonText = b.getTag().toString();
 
         LinearLayout layout;
-        ConstraintLayout selecLayout;
+        LinearLayout selecLayout;
         Button selector;
 
         switch (buttonText){
@@ -201,8 +223,8 @@ public class NewCombo extends Activity {
                 selector.setAlpha(.5f);
                 selector = (Button) findViewById(R.id.EtcTabSelector);
                 selector.setAlpha(.5f);
-                selecLayout = (ConstraintLayout) findViewById(R.id.Onglets);
-                selecLayout.setBackground(getResources().getDrawable(R.drawable.background_directions));
+                selecLayout = (LinearLayout) findViewById(R.id.Inputs);
+                selecLayout.setBackgroundColor(getResources().getColor(R.color.darkBlue));
 
                 break;
             case "Buttons" :
@@ -219,9 +241,9 @@ public class NewCombo extends Activity {
                 selector = (Button) findViewById(R.id.ButtonsTabSelector);
                 selector.setAlpha(1f);
                 selector = (Button) findViewById(R.id.EtcTabSelector);
-                selector.setAlpha(.5f);
-                selecLayout = (ConstraintLayout) findViewById(R.id.Onglets);
-                selecLayout.setBackground(getResources().getDrawable(R.drawable.background_buttons));
+                selector.setAlpha(.5f);;
+                selecLayout = (LinearLayout) findViewById(R.id.Inputs);
+                selecLayout.setBackgroundColor(getResources().getColor(R.color.darkRed));
                 break;
             case "Etc" :
                 layout = (LinearLayout) findViewById(R.id.PanelDirectionsV);
@@ -237,9 +259,9 @@ public class NewCombo extends Activity {
                 selector = (Button) findViewById(R.id.ButtonsTabSelector);
                 selector.setAlpha(.5f);
                 selector = (Button) findViewById(R.id.EtcTabSelector);
-                selector.setAlpha(1f);
-                selecLayout = (ConstraintLayout) findViewById(R.id.Onglets);
-                selecLayout.setBackground(getResources().getDrawable(R.drawable.background_etc));
+                selector.setAlpha(1f);;
+                selecLayout = (LinearLayout) findViewById(R.id.Inputs);
+                selecLayout.setBackgroundColor(getResources().getColor(R.color.darkPurple));
                 break;
         }
 
@@ -277,10 +299,10 @@ public class NewCombo extends Activity {
                     input = "n";
                     comboInput.add(input);
                     addVisual(input);
-                    input = "df";
+                    input = "d";
                     comboInput.add(input);
                     addVisual(input);
-                    input ="f";
+                    input ="df";
                     break;
                 default : break;
             }
@@ -321,10 +343,10 @@ public class NewCombo extends Activity {
                 input = "n";
                 comboInput.add(input);
                 addVisual(input);
-                input = "df";
+                input = "d";
                 comboInput.add(input);
                 addVisual(input);
-                input ="f";
+                input ="df";
                 break;
             default : break;
         }
@@ -548,6 +570,10 @@ public class NewCombo extends Activity {
         Intent intent = new Intent(this, Main.class);
         startActivity(intent);
     }
+    public void ToHome () {
+        Intent intent = new Intent(this, Main.class);
+        startActivity(intent);
+    }
 
     protected void SaveCombo (View view) {
         Intent intent = new Intent(this, SavingCombo.class);
@@ -555,5 +581,8 @@ public class NewCombo extends Activity {
         startActivity(intent);
     }
 
+    public void onBackPressed() {
+        ToHome();
+    }
 
 }

@@ -1,5 +1,7 @@
 package com.example.pierre.combos;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
@@ -30,11 +32,13 @@ public class Main extends AppCompatActivity {
 
         Button myCombosButton = (Button) findViewById(R.id.buttonMyCombos);
         Button newComboButton = (Button) findViewById(R.id.buttonNewCombo);
+        Button aboutButton = (Button) findViewById(R.id.buttonAbout);
 
 
         Typeface typefaceButtons =  Typeface.createFromAsset(getAssets(), "fonts/tarrgetengrave.ttf");
         myCombosButton.setTypeface(typefaceButtons);
         newComboButton.setTypeface(typefaceButtons);
+        aboutButton.setTypeface(typefaceButtons);
 
         /*
         // Open up our Database in case we want to save some stuff
@@ -88,6 +92,16 @@ public class Main extends AppCompatActivity {
 
     public void NewCombo(View view) {
         Intent intent = new Intent(this, NewCombo.class);
+        startActivity(intent);
+    }
+
+    public void MyCombos (View view) {
+        Intent intent = new Intent(this, MyCombos.class);
+        startActivity(intent);
+    }
+
+    public void About (View view) {
+        Intent intent = new Intent(this, About.class);
         startActivity(intent);
     }
 

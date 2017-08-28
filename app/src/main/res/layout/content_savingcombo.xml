@@ -15,7 +15,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:background="#000"
+        android:background="@color/darkBlue"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="0dp">
 
@@ -46,8 +46,10 @@
                         android:tag="Akuma"
                         android:onClick="ChooseCharacter"
                         style="?android:buttonBarButtonStyle"
-                        android:textColor="#fff"
-                        android:background="@drawable/char_background"/>
+                        android:textColor="@color/charname"
+                        android:background="@drawable/headshot_akuma"
+                        android:textAlignment="gravity"
+                        android:gravity="bottom|center"/>
                     <Button
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
@@ -56,8 +58,10 @@
                         android:tag="Alisa"
                         android:onClick="ChooseCharacter"
                         style="?android:buttonBarButtonStyle"
-                        android:textColor="#fff"
-                        android:background="@drawable/char_background"
+                        android:textColor="@color/charname"
+                        android:background="@drawable/headshot_alisa"
+                        android:textAlignment="gravity"
+                        android:gravity="bottom|center"
                         />
                     <Button
                         android:layout_width="0dp"
@@ -67,8 +71,10 @@
                         android:tag="Asuka"
                         android:onClick="ChooseCharacter"
                         style="?android:buttonBarButtonStyle"
-                        android:textColor="#fff"
-                        android:background="@drawable/char_background"/>
+                        android:textColor="@color/charname"
+                        android:background="@drawable/headshot_asuka"
+                        android:textAlignment="gravity"
+                        android:gravity="bottom|center"/>
                     <Button
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
@@ -77,8 +83,10 @@
                         android:tag="Bob"
                         android:onClick="ChooseCharacter"
                         style="?android:buttonBarButtonStyle"
-                        android:textColor="#fff"
-                        android:background="@drawable/char_background"/>
+                        android:textColor="@color/charname"
+                        android:background="@drawable/headshot_bob"
+                        android:textAlignment="gravity"
+                        android:gravity="bottom|center"/>
 
                 </LinearLayout>
                 <LinearLayout
@@ -94,8 +102,10 @@
                         android:tag="Bryan"
                         android:onClick="ChooseCharacter"
                         style="?android:buttonBarButtonStyle"
-                        android:textColor="#fff"
-                        android:background="@drawable/char_background"/>
+                        android:textColor="@color/charname"
+                        android:background="@drawable/headshot_bryan"
+                        android:textAlignment="gravity"
+                        android:gravity="bottom|center"/>
                     <Button
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
@@ -104,8 +114,10 @@
                         android:tag="Claudio"
                         android:onClick="ChooseCharacter"
                         style="?android:buttonBarButtonStyle"
-                        android:textColor="#fff"
-                        android:background="@drawable/char_background"
+                        android:textColor="@color/charname"
+                        android:background="@drawable/headshot_claudio"
+                        android:textAlignment="gravity"
+                        android:gravity="bottom|center"
                         />
                     <Button
                         android:layout_width="0dp"
@@ -115,18 +127,22 @@
                         android:tag="Devil Jin"
                         android:onClick="ChooseCharacter"
                         style="?android:buttonBarButtonStyle"
-                        android:textColor="#fff"
-                        android:background="@drawable/char_background"/>
+                        android:textColor="@color/charname"
+                        android:background="@drawable/headshot_deviljin"
+                        android:textAlignment="gravity"
+                        android:gravity="bottom|center"/>
                     <Button
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:text="Dragunov"
+                        android:text="@string/dragunov"
                         android:tag="Dragunov"
                         android:onClick="ChooseCharacter"
                         style="?android:buttonBarButtonStyle"
-                        android:textColor="#fff"
-                        android:background="@drawable/char_background"/>
+                        android:textColor="@color/charname"
+                        android:background="@drawable/headshot_dragunov"
+                        android:textAlignment="gravity"
+                        android:gravity="bottom|center"/>
 
                 </LinearLayout>
                 <LinearLayout
@@ -142,8 +158,10 @@
                         android:tag="Eddy"
                         android:onClick="ChooseCharacter"
                         style="?android:buttonBarButtonStyle"
-                        android:textColor="#fff"
-                        android:background="@drawable/char_background"/>
+                        android:textColor="@color/charname"
+                        android:background="@drawable/headshot_eddy"
+                        android:textAlignment="gravity"
+                        android:gravity="bottom|center"/>
                     <Button
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
@@ -152,8 +170,10 @@
                         android:tag="Eliza"
                         android:onClick="ChooseCharacter"
                         style="?android:buttonBarButtonStyle"
-                        android:textColor="#fff"
-                        android:background="@drawable/char_background"
+                        android:textColor="@color/charname"
+                        android:background="@drawable/headshot_eliza"
+                        android:textAlignment="gravity"
+                        android:gravity="bottom|center"
                         />
                     <Button
                         android:layout_width="0dp"
@@ -163,8 +183,10 @@
                         android:tag="Feng"
                         android:onClick="ChooseCharacter"
                         style="?android:buttonBarButtonStyle"
-                        android:textColor="#fff"
-                        android:background="@drawable/char_background"/>
+                        android:textColor="@color/charname"
+                        android:background="@drawable/headshot_feng"
+                        android:textAlignment="gravity"
+                        android:gravity="bottom|center"/>
                     <Button
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
@@ -173,8 +195,10 @@
                         android:tag="Gigas"
                         android:onClick="ChooseCharacter"
                         style="?android:buttonBarButtonStyle"
-                        android:textColor="#fff"
-                        android:background="@drawable/char_background"/>
+                        android:textColor="@color/charname"
+                        android:background="@drawable/headshot_gigas"
+                        android:textAlignment="gravity"
+                        android:gravity="bottom|center"/>
 
                 </LinearLayout>
                 <LinearLayout
@@ -190,18 +214,22 @@
                         android:tag="Heihachi"
                         android:onClick="ChooseCharacter"
                         style="?android:buttonBarButtonStyle"
-                        android:textColor="#fff"
-                        android:background="@drawable/char_background"/>
+                        android:textColor="@color/charname"
+                        android:background="@drawable/headshot_heihachi"
+                        android:textAlignment="gravity"
+                        android:gravity="bottom|center"/>
                     <Button
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:text="Hwoarang"
+                        android:text="@string/hwoarang"
                         android:tag="Hwoarang"
                         android:onClick="ChooseCharacter"
                         style="?android:buttonBarButtonStyle"
-                        android:textColor="#fff"
-                        android:background="@drawable/char_background"
+                        android:textColor="@color/charname"
+                        android:background="@drawable/headshot_hwaorang"
+                        android:textAlignment="gravity"
+                        android:gravity="bottom|center"
                         />
                     <Button
                         android:layout_width="0dp"
@@ -211,8 +239,10 @@
                         android:tag="Jack7"
                         android:onClick="ChooseCharacter"
                         style="?android:buttonBarButtonStyle"
-                        android:textColor="#fff"
-                        android:background="@drawable/char_background"/>
+                        android:textColor="@color/charname"
+                        android:background="@drawable/headshot_jack7"
+                        android:textAlignment="gravity"
+                        android:gravity="bottom|center"/>
                     <Button
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
@@ -221,8 +251,10 @@
                         android:tag="Jin"
                         android:onClick="ChooseCharacter"
                         style="?android:buttonBarButtonStyle"
-                        android:textColor="#fff"
-                        android:background="@drawable/char_background"/>
+                        android:textColor="@color/charname"
+                        android:background="@drawable/headshot_jin"
+                        android:textAlignment="gravity"
+                        android:gravity="bottom|center"/>
 
                 </LinearLayout>
                 <LinearLayout
@@ -238,18 +270,22 @@
                         android:tag="Josie"
                         android:onClick="ChooseCharacter"
                         style="?android:buttonBarButtonStyle"
-                        android:textColor="#fff"
-                        android:background="@drawable/char_background"/>
+                        android:textColor="@color/charname"
+                        android:background="@drawable/headshot_josie"
+                        android:textAlignment="gravity"
+                        android:gravity="bottom|center"/>
                     <Button
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:text="Katarina"
+                        android:text="@string/katarina"
                         android:tag="Katarina"
                         android:onClick="ChooseCharacter"
                         style="?android:buttonBarButtonStyle"
-                        android:textColor="#fff"
-                        android:background="@drawable/char_background"
+                        android:textColor="@color/charname"
+                        android:background="@drawable/headshot_katarina"
+                        android:textAlignment="gravity"
+                        android:gravity="bottom|center"
                         />
                     <Button
                         android:layout_width="0dp"
@@ -259,8 +295,10 @@
                         android:tag="Kazumi"
                         android:onClick="ChooseCharacter"
                         style="?android:buttonBarButtonStyle"
-                        android:textColor="#fff"
-                        android:background="@drawable/char_background"/>
+                        android:textColor="@color/charname"
+                        android:background="@drawable/headshot_kazumi"
+                        android:textAlignment="gravity"
+                        android:gravity="bottom|center"/>
                     <Button
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
@@ -269,8 +307,10 @@
                         android:tag="Kazuya"
                         android:onClick="ChooseCharacter"
                         style="?android:buttonBarButtonStyle"
-                        android:textColor="#fff"
-                        android:background="@drawable/char_background"/>
+                        android:textColor="@color/charname"
+                        android:background="@drawable/headshot_kazuya"
+                        android:textAlignment="gravity"
+                        android:gravity="bottom|center"/>
 
                 </LinearLayout>
                 <LinearLayout
@@ -286,8 +326,10 @@
                         android:tag="King"
                         android:onClick="ChooseCharacter"
                         style="?android:buttonBarButtonStyle"
-                        android:textColor="#fff"
-                        android:background="@drawable/char_background"/>
+                        android:textColor="@color/charname"
+                        android:background="@drawable/headshot_king"
+                        android:textAlignment="gravity"
+                        android:gravity="bottom|center"/>
                     <Button
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
@@ -296,8 +338,10 @@
                         android:tag="Kuma"
                         android:onClick="ChooseCharacter"
                         style="?android:buttonBarButtonStyle"
-                        android:textColor="#fff"
-                        android:background="@drawable/char_background"
+                        android:textColor="@color/charname"
+                        android:background="@drawable/headshot_kuma"
+                        android:textAlignment="gravity"
+                        android:gravity="bottom|center"
                         />
                     <Button
                         android:layout_width="0dp"
@@ -307,8 +351,10 @@
                         android:tag="Lars"
                         android:onClick="ChooseCharacter"
                         style="?android:buttonBarButtonStyle"
-                        android:textColor="#fff"
-                        android:background="@drawable/char_background"/>
+                        android:textColor="@color/charname"
+                        android:background="@drawable/headshot_lars"
+                        android:textAlignment="gravity"
+                        android:gravity="bottom|center"/>
                     <Button
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
@@ -317,8 +363,10 @@
                         android:tag="Law"
                         android:onClick="ChooseCharacter"
                         style="?android:buttonBarButtonStyle"
-                        android:textColor="#fff"
-                        android:background="@drawable/char_background"/>
+                        android:textColor="@color/charname"
+                        android:background="@drawable/headshot_law"
+                        android:textAlignment="gravity"
+                        android:gravity="bottom|center"/>
 
                 </LinearLayout>
                 <LinearLayout
@@ -334,8 +382,10 @@
                         android:tag="Lee"
                         android:onClick="ChooseCharacter"
                         style="?android:buttonBarButtonStyle"
-                        android:textColor="#fff"
-                        android:background="@drawable/char_background"/>
+                        android:textColor="@color/charname"
+                        android:background="@drawable/headshot_lee"
+                        android:textAlignment="gravity"
+                        android:gravity="bottom|center"/>
                     <Button
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
@@ -344,8 +394,10 @@
                         android:tag="Leo"
                         android:onClick="ChooseCharacter"
                         style="?android:buttonBarButtonStyle"
-                        android:textColor="#fff"
-                        android:background="@drawable/char_background"
+                        android:textColor="@color/charname"
+                        android:background="@drawable/headshot_leo"
+                        android:textAlignment="gravity"
+                        android:gravity="bottom|center"
                         />
                     <Button
                         android:layout_width="0dp"
@@ -355,8 +407,10 @@
                         android:tag="Lili"
                         android:onClick="ChooseCharacter"
                         style="?android:buttonBarButtonStyle"
-                        android:textColor="#fff"
-                        android:background="@drawable/char_background"/>
+                        android:textColor="@color/charname"
+                        android:background="@drawable/headshot_lili"
+                        android:textAlignment="gravity"
+                        android:gravity="bottom|center"/>
                     <Button
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
@@ -365,8 +419,10 @@
                         android:tag="Lucky Chloe"
                         android:onClick="ChooseCharacter"
                         style="?android:buttonBarButtonStyle"
-                        android:textColor="#fff"
-                        android:background="@drawable/char_background"/>
+                        android:textColor="@color/charname"
+                        android:background="@drawable/headshot_luckychloe"
+                        android:textAlignment="gravity"
+                        android:gravity="bottom|center"/>
 
                 </LinearLayout>
                 <LinearLayout
@@ -382,8 +438,10 @@
                         android:tag="Master Raven"
                         android:onClick="ChooseCharacter"
                         style="?android:buttonBarButtonStyle"
-                        android:textColor="#fff"
-                        android:background="@drawable/char_background"/>
+                        android:textColor="@color/charname"
+                        android:background="@drawable/headshot_masterraven"
+                        android:textAlignment="gravity"
+                        android:gravity="bottom|center"/>
                     <Button
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
@@ -392,8 +450,10 @@
                         android:tag="Miguel"
                         android:onClick="ChooseCharacter"
                         style="?android:buttonBarButtonStyle"
-                        android:textColor="#fff"
-                        android:background="@drawable/char_background"
+                        android:textColor="@color/charname"
+                        android:background="@drawable/headshot_miguel"
+                        android:textAlignment="gravity"
+                        android:gravity="bottom|center"
                         />
                     <Button
                         android:layout_width="0dp"
@@ -403,8 +463,10 @@
                         android:tag="Nina"
                         android:onClick="ChooseCharacter"
                         style="?android:buttonBarButtonStyle"
-                        android:textColor="#fff"
-                        android:background="@drawable/char_background"/>
+                        android:textColor="@color/charname"
+                        android:background="@drawable/headshot_nina"
+                        android:textAlignment="gravity"
+                        android:gravity="bottom|center"/>
                     <Button
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
@@ -413,8 +475,10 @@
                         android:tag="Panda"
                         android:onClick="ChooseCharacter"
                         style="?android:buttonBarButtonStyle"
-                        android:textColor="#fff"
-                        android:background="@drawable/char_background"/>
+                        android:textColor="@color/charname"
+                        android:background="@drawable/headshot_panda"
+                        android:textAlignment="gravity"
+                        android:gravity="bottom|center"/>
 
                 </LinearLayout>
                 <LinearLayout
@@ -430,8 +494,10 @@
                         android:tag="Paul"
                         android:onClick="ChooseCharacter"
                         style="?android:buttonBarButtonStyle"
-                        android:textColor="#fff"
-                        android:background="@drawable/char_background"/>
+                        android:textColor="@color/charname"
+                        android:background="@drawable/headshot_paul"
+                        android:textAlignment="gravity"
+                        android:gravity="bottom|center"/>
                     <Button
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
@@ -440,8 +506,10 @@
                         android:tag="Shaheen"
                         android:onClick="ChooseCharacter"
                         style="?android:buttonBarButtonStyle"
-                        android:textColor="#fff"
-                        android:background="@drawable/char_background"
+                        android:textColor="@color/charname"
+                        android:background="@drawable/headshot_shaheen"
+                        android:textAlignment="gravity"
+                        android:gravity="bottom|center"
                         />
                     <Button
                         android:layout_width="0dp"
@@ -451,8 +519,10 @@
                         android:tag="Steve"
                         android:onClick="ChooseCharacter"
                         style="?android:buttonBarButtonStyle"
-                        android:textColor="#fff"
-                        android:background="@drawable/char_background"/>
+                        android:textColor="@color/charname"
+                        android:background="@drawable/headshot_steve"
+                        android:textAlignment="gravity"
+                        android:gravity="bottom|center"/>
                     <Button
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
@@ -461,8 +531,10 @@
                         android:tag="Xiaoyu"
                         android:onClick="ChooseCharacter"
                         style="?android:buttonBarButtonStyle"
-                        android:textColor="#fff"
-                        android:background="@drawable/char_background"/>
+                        android:textColor="@color/charname"
+                        android:background="@drawable/headshot_xiaoyu"
+                        android:textAlignment="gravity"
+                        android:gravity="bottom|center"/>
 
                 </LinearLayout>
                 <LinearLayout
@@ -475,12 +547,14 @@
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:text="Yoshimitsu"
+                        android:text="@string/yoshimitsu"
                         android:tag="Yoshimitsu"
                         android:onClick="ChooseCharacter"
                         style="?android:buttonBarButtonStyle"
-                        android:textColor="#fff"
-                        android:background="@drawable/char_background"/>
+                        android:textColor="@color/charname"
+                        android:background="@drawable/headshot_yoshimitsu"
+                        android:textAlignment="gravity"
+                        android:gravity="bottom|center"/>
                     <Button
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
@@ -490,7 +564,7 @@
                         android:clickable="false"
                         style="?android:buttonBarButtonStyle"
                         android:visibility="invisible"
-                        android:textColor="#fff"
+                        android:textColor="@color/charname"
                         android:background="@drawable/char_background"
                         />
 
@@ -500,36 +574,48 @@
                         android:layout_weight="1"
                         android:clickable="false"
                         style="?android:buttonBarButtonStyle"
-                        android:textColor="#fff"/>
+                        android:textColor="@color/charname"/>
                     <Button
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:clickable="false"
                         style="?android:buttonBarButtonStyle"
-                        android:textColor="#fff"/>
+                        android:textColor="@color/charname"/>
 
                 </LinearLayout>
 
             </LinearLayout>
+
         </ScrollView>
 
-        <LinearLayout            android:id="@+id/inputs_holder"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="4"
-            android:background="#fff"
+            android:orientation="vertical">
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/paleBlue"/>
+
+            <LinearLayout            android:id="@+id/inputs_holder"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="4"
+            android:background="@color/darkBlue"
             android:orientation="horizontal"
             tools:layout_editor_absoluteY="0dp"
-            tools:layout_editor_absoluteX="0dp">
+            tools:layout_editor_absoluteX="0dp"
+            style="?android:buttonBarStyle">
 
 
-            <LinearLayout
+                <LinearLayout
                 android:id="@+id/text_views"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
-                android:layout_weight="7">
+                android:layout_weight="6">
 
                 <EditText
                     android:id="@+id/combo_tag"
@@ -539,8 +625,14 @@
                     android:inputType="textNoSuggestions"
                     android:hint="A tag for your combo"
                     android:text=""
-                    android:textColorHint="@color/colorPrimary"
+                    android:textColorHint="@color/paleBlue"
+                    android:textColor="@color/white"
                     android:ellipsize="end"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/paleBlue"/>
 
                 <EditText
                     android:id="@+id/combo_damage"
@@ -551,40 +643,92 @@
                     android:inputType="number"
                     android:hint="Combo Damage"
                     android:text=""
-                    android:textColorHint="@color/colorPrimary"
+                    android:textColorHint="@color/paleBlue"
+                    android:textColor="@color/white"
                     android:ellipsize="end"
                     />
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="1"
-                    android:orientation="horizontal">
-
-                    <Button
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:text="To home"
-                        android:onClick="ToHome"/>
-
-                    <Button
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:text="New Combo"
-                        android:onClick="NewCombo"/>
-
-                </LinearLayout>
 
             </LinearLayout>
-            <Button
+
+                <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/paleBlue"/>
+
+                <Button
                 android:id="@+id/save_button"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="3"
                 android:text="Save Combo"
-                android:onClick="SaveCombo"/>
+                android:onClick="SaveCombo"
+                style="?android:buttonBarButtonStyle"
+                android:textColor="@color/white"/>
+
+
+
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/paleBlue"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                style="?android:buttonBarStyle">
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="To home"
+                    android:onClick="ToHome"
+                    style="?android:buttonBarButtonStyle"
+                    android:textColor="@color/white"/>
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/paleBlue"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="4dp"/>
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="New Combo"
+                    android:onClick="NewCombo"
+                    style="?android:buttonBarButtonStyle"
+                    android:textColor="@color/white"/>
+
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/paleBlue"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="4dp"/>
+
+                <Button
+                    android:id="@+id/back_button"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="Back"
+                    android:onClick="getBack"
+                    style="?android:buttonBarButtonStyle"
+                    android:textColor="@color/white"/>
+
+            </LinearLayout>
+
+
         </LinearLayout>
+
 
     </LinearLayout>
 </LinearLayout>

@@ -62,12 +62,12 @@ public class SavingCombo extends Activity {
 
         myDbHelper = new ComboDatabaseHelper(getApplicationContext());
 
-        ChangeFont();
+        // ChangeFont();
     }
 
     protected void ChangeFont () {
 
-        Typeface typefaceButtons =  Typeface.createFromAsset(getAssets(), "fonts/tarrgetacad.ttf");
+        Typeface typefaceButtons =  Typeface.createFromAsset(getAssets(), "fonts/tarrget.ttf");
         LinearLayout layoutV = (LinearLayout) findViewById(R.id.characters_holder);
         LinearLayout layoutH;
         Button button;
@@ -82,13 +82,22 @@ public class SavingCombo extends Activity {
 
     public void ChooseCharacter (View view) {
         Button b = (Button) view;
-        b.setBackground(getResources().getDrawable(R.drawable.char_background_selected));
-        if (characterButton != null) {
-            characterButton.setBackground(getResources().getDrawable(R.drawable.char_background));
-        }
 
         characterButton = b;
 
+        LinearLayout layoutV = (LinearLayout) findViewById(R.id.characters_holder);
+        for (int i = 0; i < layoutV.getChildCount(); i++){
+            LinearLayout layoutH = (LinearLayout) layoutV.getChildAt(i);
+            for (int j = 0; j < layoutH.getChildCount(); j ++){
+                Button butt = (Button) layoutH.getChildAt(j);
+                if (b.equals(butt)){ // show our butt
+                    butt.setAlpha(1f);
+                }
+                else { // hide that ass
+                    butt.setAlpha(.7f);
+                }
+            }
+        }
 
         character = b.getTag().toString();
     }
@@ -100,7 +109,7 @@ public class SavingCombo extends Activity {
 
         if (character == "nope") {
             toast = new Toast(getApplicationContext());
-            toast.makeText(getApplicationContext(), "Please select a character", Toast.LENGTH_SHORT);
+            toast = toast.makeText(getApplicationContext(), "Please select a character", Toast.LENGTH_SHORT);
             toast.show();
         }
         else {
@@ -123,6 +132,7 @@ public class SavingCombo extends Activity {
                 toast = toast.makeText(getApplicationContext(), "Combo enregistré avec succès, ID n°" + newRowId, Toast.LENGTH_LONG);
                 toast.show();
                 Log.d("Saving Combo : insertdb", "toast ok");
+                db.close();
                 NewCombo();
 
             }
@@ -132,53 +142,50 @@ public class SavingCombo extends Activity {
                 toast = toast.makeText(getApplicationContext(), "erreur lors de l'enregistrement du combo", Toast.LENGTH_LONG);
                 toast.show();
                 Log.d("Saving Combo : insertdb", "toast ok");
+                db.close();
             }
-
         }
     }
 
-    public void NewCombo(View view) {
+    protected void NewCombo(View view) {
         Intent intent = new Intent(this, NewCombo.class);
         startActivity(intent);
     }
 
-    public void NewCombo() {
+    protected void NewCombo() {
         Intent intent = new Intent(this, NewCombo.class);
         startActivity(intent);
     }
 
-    public void ToHome (View view) {
+    protected void ToHome (View view) {
         Intent intent = new Intent(this, Main.class);
         startActivity(intent);
     }
 
-    public void ToHome () {
+    protected void ToHome () {
         Intent intent = new Intent(this, Main.class);
         startActivity(intent);
     }
 
-
-    public void LogComboInput (View view) {
-        Log.d("SavingCombo", "ComboInput value : " + comboInput.toString());
+    protected void getBack(View view) {
+        Intent intent = new Intent(this, NewCombo.class);
+        intent.putExtra("Inputs", comboInput);
+        startActivity(intent);
     }
 
-    public void LogCharacter (View view) {
-        Log.d("SavingCombo", "Character value : " + character);
-    }
-
-    public void LogTag (View view) {
-        EditText textTag = (EditText) findViewById(R.id.combo_tag);
-        Log.d("SavingCombo", "ComboTag value : " + textTag.getText().toString());
-    }
-
-    public void LogDamage (View view) {
-        EditText textTag = (EditText) findViewById(R.id.combo_damage);
-        Log.d("SavingCombo", "ComboTag value : " + textTag.getText().toString());
+    protected void getBack() {
+        Intent intent = new Intent(this, NewCombo.class);
+        intent.putExtra("Inputs", comboInput);
+        startActivity(intent);
     }
 
     public void onDestroy(){
         myDbHelper.close();
         mRetainedFragment.setData(character);
         super.onDestroy();
+    }
+
+    public void onBackPressed() {
+        getBack();
     }
 }

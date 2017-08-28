@@ -8,4 +8,13 @@
     <string name="newcombo_tab_left">Arrows</string>
     <string name="newcombo_tab_middle">Buttons</string>
     <string name="newcombo_tab_right">Etc</string>
+    <string name="dragunov">Dragunov</string>
+    <string name="katarina">Katarina</string>
+    <string name="hwoarang">Hwoarang</string>
+    <string name="yoshimitsu">Yoshimitsu</string>
+    <string name="creditLeadDesigner">Pierre Diot, Front End Designer, Back End Designer</string>
+    <string name="creditArtist">Ron Maurice \'Scrub Zilla\' Johnson, Character portaits and full body Art</string>
+    <string name="specialThanks">Special thanks to Nick \'OffInBed\' DeJesus, for providing me with the ability to use this awesome art</string>
+    <string name="font">Thanks to Iconian Fonts @ dafont.com for the slick looking Tekken Font !</string>
+    <string name="aboutMain">About ComboSampler for Tekken 7</string>
 </resources>
