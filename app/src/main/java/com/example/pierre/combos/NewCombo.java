@@ -438,9 +438,11 @@ public class NewCombo extends Activity {
             case "2+3+4" : return getResources().getDrawable(R.drawable.draw234);
             case "1+3+4" : return getResources().getDrawable(R.drawable.draw134);
             case "1+2+3+4" : return getResources().getDrawable(R.drawable.draw1234);
-            case "RA" : return getResources().getDrawable(R.drawable.drawdefault);
+            case "RA" : return getResources().getDrawable(R.drawable.drawra);
             case "Into" : return getResources().getDrawable(R.drawable.into);
             case "WS" : return getResources().getDrawable(R.drawable.ws);
+            case "WR" : return getResources().getDrawable(R.drawable.drawwr);
+            case "SS" : return getResources().getDrawable(R.drawable.drawss);
             default: return getResources().getDrawable(R.drawable.drawdefault);
         }
     }

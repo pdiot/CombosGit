@@ -194,7 +194,8 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintLeft_toLeftOf="@+id/ButtonsTab"
                 tools:layout_constraintBottom_creator="1"
-                tools:layout_constraintLeft_creator="1">
+                tools:layout_constraintLeft_creator="1"
+                >
 
                 <View
                     android:layout_width="match_parent"
@@ -831,6 +832,47 @@
                     android:background="@color/palePurple"
                     android:tag="sep"/>
 
+            <LinearLayout                    android:id="@+id/EtcTab4"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_weight="2"
+                android:orientation="horizontal"
+                style="?android:buttonBarStyle"
+                >
+                <Button                        android:id="@+id/buttonWR"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="While Running"
+                    android:tag="WR"
+                    android:onClick="addInput"
+                    style="?android:buttonBarButtonStyle"
+                    android:textColor="@color/white"/>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/palePurple"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:tag="sep"/>
+
+                <Button                        android:id="@+id/buttonWS"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="While Standing"
+                    android:tag="WS"
+                    android:onClick="addInput"
+                    style="?android:buttonBarButtonStyle"
+                    android:textColor="@color/white"/>
+
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/palePurple"
+                    android:tag="sep"/>
                 <LinearLayout                    android:id="@+id/EtcTab3"
                     android:layout_width="match_parent"
                     android:layout_height="10dp"
@@ -893,12 +935,12 @@
                         android:layout_marginBottom="4dp"
                         android:tag="sep"/>
 
-                <Button                        android:id="@+id/buttonWS"
+                <Button                        android:id="@+id/buttonSS"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:text="WS"
-                    android:tag="WS"
+                    android:text="SS"
+                    android:tag="SS"
                     android:onClick="addInput"
                     style="?android:buttonBarButtonStyle"
                     android:textColor="@color/white"/>

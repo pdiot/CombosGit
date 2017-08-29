@@ -118,6 +118,11 @@ public class Main extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void ExportImport (View view) {
+        Intent intent = new Intent(this, ExportImport.class);
+        startActivity(intent);
+    }
+
 /*
     protected void InsertCharactersInDb() {
 

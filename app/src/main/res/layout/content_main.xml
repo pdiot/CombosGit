@@ -121,6 +121,15 @@
         android:text="About"
         android:onClick="About"/>
 
+    <Button android:id="@+id/buttonDb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="?android:buttonBarButtonStyle"
+        android:textColor="@color/white"
+        android:text="Export / Import"
+        android:onClick="ExportImport"
+        android:textSize="8dp"/>
+
     <View
         android:layout_width="match_parent"
         android:layout_height="0dp"
